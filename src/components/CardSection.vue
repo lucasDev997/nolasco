@@ -28,7 +28,6 @@ import Card from '@/components/Card.vue'
 <style scoped>
 div.section_head {
   text-align: center;
-  margin-top: 2rem;
   color: var(--bronze);
 }
 div.section_head h2 {
@@ -41,10 +40,9 @@ div.section_head p {
 div.section_cards {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2rem;
 }
 section {
-  padding: 2rem;
+  padding: 2rem 0 4rem 2rem;
   background-color: var(--timberwolf);
 }
 </style>

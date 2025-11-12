@@ -23,11 +23,6 @@ const props = defineProps({
 </template>
 
 <style scoped>
-:root {
-  --silver: #c0c0c0ff;
-  --timberwolf: #d9dbd3ff;
-}
-
 .card {
   position: relative;
   width: 300px;
