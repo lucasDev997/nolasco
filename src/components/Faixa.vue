@@ -61,6 +61,10 @@
   text-transform: uppercase;
 }
 
+.banner-content span:last-child {
+  padding-right: 1.5rem;
+}
+
 /* Animação contínua */
 @keyframes scroll {
   0% {
