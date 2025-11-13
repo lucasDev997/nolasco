@@ -25,29 +25,38 @@ const message = ref(
 
 <style scoped>
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 2rem;
-  background-color: var(--eerie-black);
-  mask-image: linear-gradient(to bottom, var(--eerie-black) 85%, transparent 100%);
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
 }
 
 .hero_image img {
-  width: 480px;
-  height: auto;
+  position: relative;
+  inset: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 1000px;
+  width: auto;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.hero_text {
+  position: relative;
+  z-index: 2;
+  color: var(--bronze);
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+  background: rgba(29, 29, 26, 0.6); /* leve overlay */
   border-radius: 12px;
-  transition: transform 0.4s ease;
-  mask-image: linear-gradient(to bottom, var(--eerie-black) 85%, transparent 100%);
 }
 
 .hero_image img:hover {
   transform: scale(1.03);
-}
-
-.hero_text {
-  color: var(--bronze);
-  max-width: 600px;
 }
 
 .hero_text h1 {
@@ -70,10 +79,15 @@ const message = ref(
     padding: 2rem 1.5rem;
   }
 
+  .hero_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .hero_image img {
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: 1.5rem;
+    height: 800px;
+    width: auto;
     mask-image: linear-gradient(to bottom, var(--eerie-black) 85%, transparent 100%);
   }
 
@@ -95,11 +109,23 @@ const message = ref(
   .hero {
     padding: 1.5rem 1rem;
     mask-image: linear-gradient(to bottom, var(--eerie-black) 85%, transparent 100%);
+    position: relative;
   }
 
+  .hero_text {
+    position: absolute;
+    top: 50%;
+  }
+
+  .hero_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .hero_image img {
-    width: 100%;
-    max-width: 320px;
+    height: 700px;
+    width: auto;
+    mask-image: linear-gradient(to bottom, var(--eerie-black) 75%, transparent 100%);
   }
 
   .hero_text h1 {
